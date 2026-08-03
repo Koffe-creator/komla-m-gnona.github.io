@@ -7,6 +7,7 @@ no build step, no dependencies to install.
 index.html    all the content — edit the text right here
 styles.css    all the styling — colors are variables at the top
 script.js     theme toggle, mobile menu, scroll reveals, email link
+sitemap.xml   one URL, for submitting to Google Search Console
 ```
 
 The only external request the page makes is to Google Fonts, for Fraunces and
@@ -36,6 +37,28 @@ carry no location at all. To restore the download:
 1. Put a PDF with that line removed at `assets/Komla_Gnona_Resume.pdf`
 2. In `index.html`, swap the "Get in touch" button in the hero for the
    commented-out download link sitting right above it
+
+## Getting indexed by Google
+
+Verifying in Search Console needs a Google sign-in, so it has to be done by hand
+at https://search.google.com/search-console. The site is already prepped:
+
+1. Add a **URL prefix** property (not Domain — that needs DNS control over
+   `github.io`, which nobody outside GitHub has) for
+   `https://koffe-creator.github.io/komla-m-gnona.github.io/`
+2. Pick the **HTML tag** verification method and copy the `content` token
+3. In `index.html`, uncomment the `google-site-verification` meta tag near the
+   top and paste the token in, then push
+4. Back in Search Console, click **Verify**
+5. Then **Sitemaps** → submit `sitemap.xml`, and use **URL Inspection** on the
+   homepage → **Request indexing**
+
+Note there is no `robots.txt` here on purpose. A `robots.txt` is only honored at
+the root of a host, and this site lives in a subdirectory of `koffe-creator.github.io`
+— one placed here would be ignored. Nothing is blocked by default, so crawling is
+already allowed.
+
+If `sitemap.xml` ever lists more than the homepage, update `<lastmod>`.
 
 ## No location, by design
 
