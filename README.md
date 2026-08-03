@@ -7,7 +7,6 @@ no build step, no dependencies to install.
 index.html    all the content — edit the text right here
 styles.css    all the styling — colors are variables at the top
 script.js     theme toggle, mobile menu, scroll reveals, email link
-assets/       résumé PDF
 ```
 
 The only external request the page makes is to Google Fonts, for Fraunces and
@@ -30,19 +29,19 @@ number is `.metric__val` and the small caption under it is `.metric__label`. The
 little ROC curve SVG is optional — include it only when the metric really is an
 AUC, otherwise leave it out and just show the number.
 
-**Updating the résumé** — replace `assets/Komla_Gnona_Resume.pdf` with a new file
-of the same name and the download button keeps working.
+**Adding the résumé back** — there is deliberately no résumé PDF in this repo.
+Every version on hand opens with "Local to Sunnyvale, CA", and the site is meant
+to carry no location at all. To restore the download:
 
-## Before publishing
+1. Put a PDF with that line removed at `assets/Komla_Gnona_Resume.pdf`
+2. In `index.html`, swap the "Get in touch" button in the hero for the
+   commented-out download link sitting right above it
 
-- [ ] Confirm job titles: "Senior Scientist, Biomarker Analysis" at Amgen and
-      "Postdoctoral Fellow, HIV Genomics" at HJF
-- [ ] **The résumé PDF still names a city.** The page itself carries no location
-      by design — no city in the hero, the fact card, the timeline, or the
-      footer. But `assets/Komla_Gnona_Resume.pdf` opens with "Local to
-      Sunnyvale, CA", and anyone who clicks Download gets it. Swap in a version
-      with that line removed before publishing.
-- [ ] Sanity-check the project metrics — they're stated as claims you'd defend
+## No location, by design
+
+Nothing on this page says where Komla lives or has lived — not the hero, the
+About fact card, the timeline (dates only, no cities), or the footer. Keep it
+that way when editing, and check any PDF before adding it to `assets/`.
 
 ## Viewing it locally
 
