@@ -30,8 +30,8 @@ little ROC curve SVG is optional — include it only when the metric really is a
 AUC, otherwise leave it out and just show the number.
 
 **Adding the résumé back** — there is deliberately no résumé PDF in this repo.
-Every version on hand opens with "Local to Sunnyvale, CA", and the site is meant
-to carry no location at all. To restore the download:
+Every version on hand opens with a line naming a city, and the site is meant to
+carry no location at all. To restore the download:
 
 1. Put a PDF with that line removed at `assets/Komla_Gnona_Resume.pdf`
 2. In `index.html`, swap the "Get in touch" button in the hero for the
