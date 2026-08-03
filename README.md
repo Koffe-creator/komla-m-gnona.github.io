@@ -43,20 +43,15 @@ carry no location at all. To restore the download:
 Verifying in Search Console needs a Google sign-in, so it has to be done by hand
 at https://search.google.com/search-console. The site is already prepped:
 
-1. Add a **URL prefix** property (not Domain — that needs DNS control over
-   `github.io`, which nobody outside GitHub has) for
-   `https://koffe-creator.github.io/komla-m-gnona.github.io/`
-2. Pick the **HTML tag** verification method and copy the `content` token
-3. In `index.html`, uncomment the `google-site-verification` meta tag near the
-   top and paste the token in, then push
-4. Back in Search Console, click **Verify**
-5. Then **Sitemaps** → submit `sitemap.xml`, and use **URL Inspection** on the
-   homepage → **Request indexing**
+1. Add a **Domain** property for `komlagnona.com`. Since the domain is on
+   Cloudflare, verification is a single TXT record — Search Console gives you the
+   value, and Cloudflare has a one-click flow for it. A Domain property covers
+   `www`, the apex, http and https all at once.
+2. **Sitemaps** → submit `sitemap.xml`
+3. **URL Inspection** on `https://komlagnona.com/` → **Request indexing**
 
-Note there is no `robots.txt` here on purpose. A `robots.txt` is only honored at
-the root of a host, and this site lives in a subdirectory of `koffe-creator.github.io`
-— one placed here would be ignored. Nothing is blocked by default, so crawling is
-already allowed.
+The `google-site-verification` meta tag in `index.html` is only needed for the
+HTML-tag method. With a Domain property you can leave it commented out.
 
 If `sitemap.xml` ever lists more than the homepage, update `<lastmod>`.
 
