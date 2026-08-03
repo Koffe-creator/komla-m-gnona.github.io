@@ -35,11 +35,13 @@ of the same name and the download button keeps working.
 
 ## Before publishing
 
-- [ ] Confirm the location line — the site says "Relocating to Tempe, AZ" in two
-      places (the About fact card and the footer)
 - [ ] Confirm job titles: "Senior Scientist, Biomarker Analysis" at Amgen and
       "Postdoctoral Fellow, HIV Genomics" at HJF
-- [ ] Confirm the résumé PDF in `assets/` is the version you want public
+- [ ] **The résumé PDF still names a city.** The page itself carries no location
+      by design — no city in the hero, the fact card, the timeline, or the
+      footer. But `assets/Komla_Gnona_Resume.pdf` opens with "Local to
+      Sunnyvale, CA", and anyone who clicks Download gets it. Swap in a version
+      with that line removed before publishing.
 - [ ] Sanity-check the project metrics — they're stated as claims you'd defend
 
 ## Viewing it locally
