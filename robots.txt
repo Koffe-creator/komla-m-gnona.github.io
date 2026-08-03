@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://komlagnona.com/sitemap.xml
+Sitemap: https://www.komlagnona.com/sitemap.xml

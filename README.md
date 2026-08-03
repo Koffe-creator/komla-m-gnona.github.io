@@ -48,7 +48,7 @@ at https://search.google.com/search-console. The site is already prepped:
    value, and Cloudflare has a one-click flow for it. A Domain property covers
    `www`, the apex, http and https all at once.
 2. **Sitemaps** → submit `sitemap.xml`
-3. **URL Inspection** on `https://komlagnona.com/` -> **Request indexing**
+3. **URL Inspection** on `https://www.komlagnona.com/` -> **Request indexing**
 
 The `google-site-verification` meta tag in `index.html` is only needed for the
 HTML-tag method. With a Domain property you can leave it commented out.
